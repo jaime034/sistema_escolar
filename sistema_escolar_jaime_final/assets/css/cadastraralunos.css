@@ -1,0 +1,150 @@
+/* Configurações Globais / Global Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título Principal / Main Heading */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Cartão do Formulário / Form Card Container */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Rotulagem dos Campos / Field Labels */
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #34495e;
+    margin-bottom: -8px;
+}
+
+/* Campos de Entrada / Input Fields */
+input[type='text'],
+input[type='email'],
+input[type='date'] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='date']:focus {
+    border-color: #2ecc71;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+}
+
+/* Container de Botões e Links / Button Container */
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Botão Principal de Cadastro / Submit Button */
+button[type='submit'] {
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type='submit']:hover {
+    background-color: #27ae60;
+}
+
+/* Link Voltar / Back Link */
+a {
+    text-decoration: none;
+    color: #7f8c8d;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #34495e;
+}
+
+/* Mensagens de Erro / Error Messages */
+.mensagem-erro {
+    background-color: #fce4e4;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 12px 16px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(46, 204, 113, 0.3);
+    outline-offset: 3px;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    form {
+        padding: 22px 18px;
+    }
+
+    .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .form-actions button,
+    .form-actions a {
+        text-align: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,302 @@
+/* Configurações Globais / Global Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título Principal / Main Heading */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Links Superiores e Botões / Top Links & Buttons */
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Links de Ação Principais / Main Action Links */
+.top-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #2ecc71;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+    color: #ffffff;
+}
+
+/* Formulário de Pesquisa / Search Form */
+.search-form {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.search-form input[type='text'] {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-form input[type='text']:focus {
+    border-color: #3498db;
+}
+
+.search-form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.search-form button:hover {
+    background-color: #2980b9;
+}
+
+.search-form a {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.search-form a:hover {
+    color: #c0392b;
+}
+
+/* Tabela / Table Style */
+.table-wrapper {
+    width: 100%;
+    max-width: 900px;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+}
+
+th,
+td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+thead {
+    background-color: #34495e;
+    color: white;
+}
+
+th {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.15s;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Ações na Tabela (Editar / Excluir) / Table Actions */
+.acoes {
+    white-space: nowrap;
+}
+
+.inline-form {
+    display: inline;
+    margin-left: 10px;
+}
+
+.action-link {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0;
+    text-decoration: none;
+}
+
+.action-link.edit {
+    color: #f39c12;
+}
+
+.action-link.edit:hover {
+    color: #d35400;
+}
+
+.action-link.delete {
+    color: #e74c3c;
+}
+
+.action-link.delete:hover {
+    color: #c0392b;
+}
+
+.mensagem {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.mensagem.sucesso {
+    background-color: #e8f8ef;
+    border-color: #b7ebc6;
+    color: #216e39;
+}
+
+.mensagem.aviso {
+    background-color: #fff8e1;
+    border-color: #f5d98b;
+    color: #7a5b00;
+}
+
+.mensagem.erro {
+    background-color: #fce4e4;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* Estilização para quando nenhum aluno é encontrado / Empty state */
+td[colspan='6'] {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 30px;
+    font-style: italic;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(52, 152, 219, 0.35);
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    .top-actions,
+    .search-form {
+        max-width: 100%;
+    }
+
+    .search-form {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .search-form button,
+    .search-form a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    h2 {
+        font-size: 1.55rem;
+        text-align: center;
+    }
+
+    .top-actions {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}
+
+/* Espaçamento das ações por link da versão final. */
+.acoes .action-link + .action-link {
+    margin-left: 10px;
+}

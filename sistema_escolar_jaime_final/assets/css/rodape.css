@@ -1,0 +1,22 @@
+/* Rodapé comum a todas as páginas */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.site-footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 22px 16px;
+    text-align: center;
+    color: #64748b;
+    font:
+        0.875rem 'Segoe UI',
+        Tahoma,
+        sans-serif;
+}
+@media print {
+    .site-footer {
+        display: none;
+    }
+}
